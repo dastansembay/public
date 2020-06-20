@@ -6,5 +6,6 @@ RUN go get golang.org/x/tools/cmd/goimports
 RUN go get github.com/01-edu/z01
 COPY entrypoint.sh /usr/local/bin
 COPY . src
+RUN go get rc
 RUN go install rc prog/...
 ENTRYPOINT ["/bin/sh", "/usr/local/bin/entrypoint.sh"]
